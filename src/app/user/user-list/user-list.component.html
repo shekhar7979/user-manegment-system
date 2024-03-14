@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <table class="table-reactive">
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+                <th>Action</th>
+            </tr>
+            <tr *ngFor="let dt of data">
+                <td>{{dt.fname}}</td>
+                <td>{{dt.lname}}</td>
+                <td>{{dt.addr}}</td>
+                <td>{{dt.email}}</td>
+                <td>{{dt.Phone}}</td>
+                <td><button class="btn"  (click)="edit(dt)">Edit</button></td>
+                <td><button class="btn"  (click)="ondelete(dt)">Deleate</button></td>
+            </tr>
+        </table>
+        <div class=" form-group text-center py-3">
+            <button type="submit" routerLink="" class="btn btn-success">Back</button>
+        </div>
+    </div>
+</div>

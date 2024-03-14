@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <div class="container mt-5">
+        <div class=" text-center">
+            <h3>User Information</h3>
+        </div>
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="FirstName">FirstName</label>
+                    <input type="text" formControlName="fname" placeholder="First Name" class="form-control" required
+                        [ngClass]="{'is-invalid': isSubmitted && f.fname.errors }">
+                    <div *ngIf="isSubmitted && f.fname.errors?.required" class="invalid-feedback">
+                        first Name is Required
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="LastName">LastName</label>
+                    <input type="text" formControlName="lname" placeholder="Last Name" class="form-control" required
+                        [ngClass]="{'is-invalid': isSubmitted && f.lname.errors }">
+                    <div *ngIf="isSubmitted && f.lname.errors?.required" class="invalid-feedback">
+                        LastName is Required
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Address">Address</label>
+                    <input type="text" class="form-control" formControlName="addr" placeholder="Address" required
+                        [ngClass]="{'is-invalid': isSubmitted && f.addr.errors }">
+                    <div *ngIf="isSubmitted && f.addr.errors?.required" class="invalid-feedback">
+                        Address is Required
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" formControlName="email"   placeholder="Address" required
+                        [ngClass]="{'is-invalid': isSubmitted && f.email.errors }">
+                    <div *ngIf="isSubmitted && f.email.errors?.required" class="invalid-feedback">
+                        Email is Required
+                    </div>
+                    <div *ngIf="isSubmitted && f.email.errors?.email" class="invalid-feedback">
+                        invalid Email Address
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Phone">Phone</label>
+                    <input type="number" class="form-control" placeholder="Phone" formControlName="Phone" required
+                        [ngClass]="{'is-invalid': isSubmitted && f.Phone.errors }">
+                    <div *ngIf="isSubmitted && f.Phone.errors?.required" class="invalid-feedback">
+                        phone is Required
+                    </div>
+                    <div *ngIf="isSubmitted && f.Phone.errors?.pattern" class="invalid-feedback">
+                        invalid phone Number
+                    </div>
+                </div>
+                <div class=" form-group text-center py-3">
+                    <button type="submit"  class="btn btn-success">Save</button>
+                    <button type="button"  (click)="updateValue()" class="btn btn-success my-1">update</button>
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

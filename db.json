@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "fname": "shekhar",
+      "lname": "jagtap",
+      "addr": "Talegaon dhamdhere",
+      "email": "shekharjagtap7979@gmail.com",
+      "Phone": 8308147979,
+      "id": "2fcd"
+    },
+    {
+      "fname": "akshay",
+      "lname": "jagtap",
+      "addr": "Talegaon dhamdhere",
+      "email": "akshayjagtap7979@gmail.com",
+      "Phone": 8308147979,
+      "id": "fe7f"
+    }
+  ]
+}
